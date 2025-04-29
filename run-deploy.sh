@@ -34,7 +34,7 @@ echo
 echo "🔐 Decrypting and running deploy.sh.enc..."
 openssl enc -d -aes-256-cbc -salt \
   -in deploy.sh.enc \
-  -pass pass:"$PW" | bash
+  -pass pass:"$PW" | bash -l -s
 
 echo "✅ deploy.sh execution complete."
 
